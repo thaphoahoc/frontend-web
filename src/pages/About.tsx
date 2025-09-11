@@ -51,7 +51,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="prose prose-lg max-w-none">
                 <p className="text-foreground leading-relaxed mb-6">
-                  Dr. Nguyen Minh Hoa has dedicated over 15 years to revolutionizing chemistry education 
+                  Dr. Trinh has dedicated over 15 years to revolutionizing chemistry education 
                   in Vietnam. With a strong foundation in both chemistry research and educational pedagogy, 
                   she brings a unique perspective that combines rigorous scientific thinking with 
                   accessible teaching methods.
@@ -66,7 +66,7 @@ const About = () => {
                 </p>
 
                 <p className="text-foreground leading-relaxed mb-6">
-                  Throughout her career, Dr. Hoa has focused on developing teaching methodologies that 
+                  Throughout her career, Dr. Trinh has focused on developing teaching methodologies that 
                   emphasize critical thinking over memorization. She believes that when students understand 
                   the logical patterns underlying chemical phenomena, they develop problem-solving skills 
                   that extend far beyond the chemistry classroom.
@@ -74,7 +74,7 @@ const About = () => {
 
                 <p className="text-foreground leading-relaxed">
                   Her innovative approaches have been recognized nationally, and she continues to mentor 
-                  both students and fellow educators. Dr. Hoa's ultimate goal is to inspire a new 
+                  both students and fellow educators. Dr. Trinh's ultimate goal is to inspire a new 
                   generation of thinkers who approach challenges with scientific rigor and intellectual curiosity.
                 </p>
               </CardContent>
