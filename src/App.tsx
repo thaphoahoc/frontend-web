@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const base = import.meta.env.BASE_URL;
 
 const App = () => (
     <LanguageProvider>
@@ -28,13 +29,13 @@ const App = () => (
         <Navigation />
         <main className="min-h-screen">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/lessons" element={<Lessons />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path={`${base}`} element={<Home />} />
+            <Route path={`${base}about`} element={<About />} />
+            <Route path={`${base}lessons`} element={<Lessons />} />
+            <Route path={`${base}resources`} element={<Resources />} />
+            <Route path={`${base}blog`} element={<Blog />} />
+            <Route path={`${base}courses`} element={<Courses />} />
+            <Route path={`${base}contact`} element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

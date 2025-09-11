@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/language-context";
 import { useState, useRef, useEffect } from "react";
 
+const base = import.meta.env.BASE_URL;
+
 const Navigation = () => {
   const location = useLocation();
   const { language, toggleLanguage } = useLanguage();
@@ -26,13 +28,13 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { path: "/", label: { vi: "Trang chủ", en: "Home" } },
-    { path: "/lessons", label: { vi: "Bài học", en: "Lessons" } },
-    { path: "/courses", label: { vi: "Khóa học", en: "Courses" } },
-    { path: "/resources", label: { vi: "Tài liệu", en: "Resources" } },
-    { path: "/blog", label: { vi: "Blog", en: "Blog" } },
-    { path: "/about", label: { vi: "Giới thiệu", en: "About" } },
-    { path: "/contact", label: { vi: "Liên hệ", en: "Contact" } },
+    { path: `${base}`, label: { vi: "Trang chủ", en: "Home" } },
+    { path: `${base}lessons`, label: { vi: "Blog", en: "Blog" } },
+    { path: `${base}courses`, label: { vi: "Khóa học", en: "Courses" } },
+    { path: `${base}resources`, label: { vi: "Tài liệu", en: "Resources" } },
+    { path: `${base}blog`, label: { vi: "Blog", en: "Blog" } },
+    { path: `${base}about`, label: { vi: "Giới thiệu", en: "About" } },
+    { path: `${base}contact`, label: { vi: "Liên hệ", en: "Contact" } },
   ];
 
   return (
@@ -43,7 +45,7 @@ const Navigation = () => {
             to="/"
             className="flex items-center space-x-2 text-2xl font-serif font-semibold text-primary"
           >
-            <img src="/favicon.ico" alt="Logo" className="w-6 h-6" />
+            <img src={`${base}favicon.ico`} alt="Logo" className="w-6 h-6" />
             <span>THÁP HÓA HỌC</span>
           </Link>
 
