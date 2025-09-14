@@ -29,7 +29,6 @@ const Navigation = () => {
 
   const navItems = [
     { path: `${base}`, label: { vi: "Trang chủ", en: "Home" } },
-    { path: `${base}lessons`, label: { vi: "Blog", en: "Blog" } },
     { path: `${base}courses`, label: { vi: "Khóa học", en: "Courses" } },
     { path: `${base}resources`, label: { vi: "Tài liệu", en: "Resources" } },
     { path: `${base}blog`, label: { vi: "Blog", en: "Blog" } },
