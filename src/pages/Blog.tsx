@@ -10,6 +10,10 @@ function tr<T extends Record<string, string>>(m: T, lang: "en" | "vi") {
   return m[lang] ?? m.en;
 }
 
+// 🆕 Thumbnail helper (Picsum: unique, free, no auth needed)
+const thumbUrl = (title: string, i: number, w = 800, h = 420) =>
+  `https://picsum.photos/seed/${encodeURIComponent(`${title}-${i}`)}/${w}/${h}`;
+
 // --- Blog data (bilingual) ---
 const blogPosts = [
   {
@@ -242,7 +246,24 @@ export default function Blog() {
           <div className="lg:col-span-3">
             <div className="space-y-8">
               {blogPosts.map((post, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
+                  {/* 🆕 Thumbnail */}
+                  <img
+                    src={thumbUrl(tr(post.title, "en"), index)}
+                    alt={tr(post.title, language)}
+                    loading="lazy"
+                    width={800}
+                    height={420}
+                    className="w-full aspect-[16/9] object-cover"
+                    srcSet={`
+                      ${thumbUrl(tr(post.title, "en"), index, 480, 270)} 480w,
+                      ${thumbUrl(tr(post.title, "en"), index, 640, 360)} 640w,
+                      ${thumbUrl(tr(post.title, "en"), index, 800, 420)} 800w,
+                      ${thumbUrl(tr(post.title, "en"), index, 1200, 630)} 1200w
+                    `}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px"
+                  />
+
                   <CardHeader>
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <Badge variant="outline">{tr(post.category, language)}</Badge>
@@ -257,6 +278,7 @@ export default function Blog() {
                       {tr(post.title, language)}
                     </CardTitle>
                   </CardHeader>
+
                   <CardContent>
                     <CardDescription className="mb-4 leading-relaxed text-base">
                       {tr(post.excerpt, language)}
@@ -374,3 +396,4 @@ export default function Blog() {
     </div>
   );
 }
+
