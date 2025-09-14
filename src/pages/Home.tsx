@@ -115,7 +115,7 @@ const Home = () => {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">{t.heroDescription}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-                  <Link to="/lessons">{t.explore}</Link>
+                  <Link to="/resources">{t.explore}</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/about">{t.approach}</Link>
@@ -175,7 +175,7 @@ const Home = () => {
                 <CardContent>
                   <CardDescription className="mb-4 leading-relaxed">{lesson.description}</CardDescription>
                   <Button variant="outline" size="sm" asChild>
-                    <Link to="/lessons">{t.viewLesson}</Link>
+                    <Link to="/resources">{t.viewLesson}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -184,7 +184,7 @@ const Home = () => {
 
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
-              <Link to="/lessons">{t.viewAll}</Link>
+              <Link to="/resources">{t.viewAll}</Link>
             </Button>
           </div>
         </div>
