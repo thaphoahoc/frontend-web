@@ -23,7 +23,7 @@ interface FormData {
 
 const copy: Record<"vi" | "en", any> = {
   en: {
-    pageTitle: "Contact Dr. Cao Tran Ngoc Tu Trinh",
+    pageTitle: "Contact Ms. Cao Tran Ngoc Tu Trinh",
     pageIntro:
       "Ready to begin your chemistry learning journey? Have questions about courses or teaching methods? I'd love to hear from you.",
     sendTitle: "Send a Message",
@@ -97,7 +97,7 @@ const copy: Record<"vi" | "en", any> = {
     badge: "English",
   },
   vi: {
-    pageTitle: "Liên hệ TS. Cao Trần Ngọc Tú Trinh",
+    pageTitle: "Liên hệ GV. Cao Trần Ngọc Tú Trinh",
     pageIntro:
       "Sẵn sàng bắt đầu hành trình học Hóa học? Có câu hỏi về các khóa học hoặc phương pháp giảng dạy? Tôi rất vui được lắng nghe bạn.",
     sendTitle: "Gửi tin nhắn",

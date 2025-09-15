@@ -28,14 +28,14 @@ type Copy = {
 
 const COPY: Record<"vi" | "en", Copy> = {
   en: {
-    title: "About Dr. Cao Tran Ngoc Tu Trinh",
+    title: "About Ms. Cao Trần Ngọc Tú Trinh",
     tagline:
       "A passionate educator dedicated to transforming chemistry education through scientific thinking, logical reasoning, and evidence-based learning approaches.",
     biography: [
-      "Dr. Cao Tran Ngoc Tu Trinh has dedicated over 15 years to revolutionizing chemistry education in Vietnam. With a strong foundation in both chemistry research and educational pedagogy, she brings a unique perspective that combines rigorous scientific thinking with accessible teaching methods.",
-      "Her journey began with a deep fascination for the molecular world and how understanding chemical principles could unlock solutions to real-world problems. This passion led her to pursue advanced degrees in both chemistry and education, recognizing that effective teaching requires not just subject expertise, but also a deep understanding of how students learn.",
-      "Throughout her career, Dr. Nguyen has focused on developing teaching methodologies that emphasize critical thinking over memorization. She believes that when students understand the logical patterns underlying chemical phenomena, they develop problem-solving skills that extend far beyond the chemistry classroom.",
-      "Her innovative approaches have been recognized nationally, and she continues to mentor both students and fellow educators. Dr. Nguyen's ultimate goal is to inspire a new generation of thinkers who approach challenges with scientific rigor and intellectual curiosity."
+      "Ms. Cao Trần Ngọc Tú Trinh is an educator committed to renewing chemistry education in Vietnam. With a solid grounding in chemistry and education, she pairs rigorous scientific thinking with accessible, student-centered teaching methods.",
+      "Her journey began with a fascination for the molecular world and the belief that core chemical principles can illuminate solutions to real-world problems. This passion has guided her studies and classroom practice, where effective teaching blends subject expertise with a deep understanding of how students learn.",
+      "Throughout her work, Ms. Tú Trinh prioritizes approaches that cultivate critical thinking over rote memorization. By helping students see the logical patterns behind chemical phenomena, she nurtures problem-solving skills that reach beyond the chemistry classroom.",
+      "Her learner-focused, evidence-informed methods have been well received by students and parents alike. She continues to support learners and collaborate closely with fellow educators, aiming to inspire a new generation that tackles challenges with scientific rigor and intellectual curiosity."
     ],
     teachingPhilosophyTitle: "Teaching Philosophy",
     teachingPillars: [
@@ -60,55 +60,46 @@ const COPY: Record<"vi" | "en", Copy> = {
           "Chemistry concepts are always connected to real-world applications, helping students see the relevance and importance of their studies in daily life and future careers."
       }
     ],
-    educationTitle: "Education Background",
+    educationTitle: "Educational Background",
     education: [
       {
-        degree: "Ph.D. in Chemistry",
-        institution: "Hanoi University of Science and Technology",
-        year: "2015",
-        focus: "Organic Synthesis and Catalysis"
-      },
-      {
-        degree: "M.Sc. in Chemistry Education",
-        institution: "Vietnam National University",
-        year: "2011",
-        focus: "Pedagogical Methods in Science Education"
-      },
-      {
-        degree: "B.Sc. in Chemistry",
-        institution: "Hanoi University of Science",
-        year: "2009",
+        degree: "B.Ed. in Chemistry Education",
+        institution: "Ho Chi Minh City University of Education",
+        year: "2026",
         focus: "Analytical and Physical Chemistry"
       }
     ],
     achievementsTitle: "Key Achievements",
     achievements: [
-      "15+ years of high school chemistry teaching experience",
-      "Published 25+ peer-reviewed articles on chemistry education",
-      "Winner of National Excellence in Teaching Award (2020)",
-      "Developed innovative curriculum adopted by 50+ schools",
-      "Mentor to 200+ students who pursued STEM careers"
+      "Active contributor to discourse on chemistry education",
+      "First Prize, Faculty of Chemistry Scientific Research (2025)",
+      "First Prize, Faculty of Chemistry Scientific Research (2024)",
+      "Third Prize, Vietnam National Student Chemistry Olympiad XII (2025)",
+      "Third Prize, Vietnam National Student Chemistry Olympiad XI (2023)",
+      "Odon Vallet Scholarship (2024)",
+      "UE awards"
     ],
     contactTitle: "Get in Touch",
-    contactLead: "Interested in discussing chemistry education or collaboration opportunities?",
+    contactLead:
+      "Interested in discussing chemistry education or collaboration opportunities?",
     contactCta: "Contact Me →"
   },
   vi: {
-    title: "Giới thiệu về TS. Cao Trần Ngọc Tú Trinh",
+    title: "Giới thiệu về GV. Cao Trần Ngọc Tú Trinh",
     tagline:
       "Nhà giáo tận tâm với sứ mệnh đổi mới giáo dục hóa học thông qua tư duy khoa học, lập luận logic và phương pháp học tập dựa trên bằng chứng.",
     biography: [
-      "TS. Cao Trần Ngọc Tú Trinh đã dành hơn 15 năm để góp phần đổi mới giáo dục hóa học tại Việt Nam. Với nền tảng vững chắc về nghiên cứu hóa học và khoa học giáo dục, cô kết hợp tư duy khoa học nghiêm ngặt với phương pháp giảng dạy dễ tiếp cận.",
+      "GV. Cao Trần Ngọc Tú Trinh đã dành hơn nhiều năm để góp phần đổi mới giáo dục hóa học tại Việt Nam. Với nền tảng vững chắc về nghiên cứu hóa học và khoa học giáo dục, cô kết hợp tư duy khoa học nghiêm ngặt với phương pháp giảng dạy dễ tiếp cận.",
       "Hành trình của cô bắt đầu từ niềm say mê thế giới phân tử và cách các nguyên lý hóa học có thể mở ra lời giải cho những vấn đề thực tiễn. Niềm đam mê ấy dẫn cô theo đuổi các bậc học cao về cả hóa học và giáo dục, bởi dạy học hiệu quả không chỉ đòi hỏi kiến thức chuyên môn mà còn hiểu sâu về cách học của học sinh.",
-      "Trong suốt sự nghiệp, TS. Nguyễn tập trung phát triển các phương pháp giảng dạy đề cao tư duy phản biện thay vì học thuộc lòng. Khi nắm được các quy luật logic đằng sau hiện tượng hóa học, học sinh phát triển năng lực giải quyết vấn đề vượt xa phạm vi lớp học.",
-      "Những cách tiếp cận đổi mới của cô được ghi nhận ở cấp quốc gia; cô tiếp tục dẫn dắt học sinh và đồng nghiệp. Mục tiêu của TS. Nguyễn là khơi dậy một thế hệ người học mới tiếp cận thách thức với tinh thần khoa học và trí tò mò học thuật."
+      "Trong suốt sự nghiệp, GV. Tú Trinh tập trung phát triển các phương pháp giảng dạy đề cao tư duy phản biện thay vì học thuộc lòng. Khi nắm được các quy luật logic đằng sau hiện tượng hóa học, học sinh phát triển năng lực giải quyết vấn đề vượt xa phạm vi lớp học.",
+      "Những cách tiếp cận đổi mới của cô được ghi nhận bởi đông đảo quý học sinh phụ huynh; cô tiếp tục dẫn dắt học sinh và trao đổi chuyên sâu với các đồng nghiệp. Mục tiêu của GV. Tú Trinh là khơi dậy một thế hệ người học mới tiếp cận thách thức với tinh thần khoa học và trí tò mò học thuật."
     ],
     teachingPhilosophyTitle: "Quan điểm giảng dạy",
     teachingPillars: [
       {
         title: "Tiếp cận theo nền tảng",
         body:
-          "Mọi khái niệm phức tạp đều xây trên nguyên lý đơn giản. Tôi giúp học sinh nắm chắc nền tảng trước khi tiến tới nội dung nâng cao, tạo móng vững cho học tập suốt đời."
+          "Mọi khái niệm phức tạp đều xây trên nguyên lý đơn giản. Giúp học sinh nắm chắc nền tảng trước khi tiến tới nội dung nâng cao, tạo móng vững cho học tập suốt đời."
       },
       {
         title: "Lập luận dựa trên bằng chứng",
@@ -129,37 +120,30 @@ const COPY: Record<"vi" | "en", Copy> = {
     educationTitle: "Nền tảng học vấn",
     education: [
       {
-        degree: "Tiến sĩ Hóa học",
-        institution: "Đại học Bách khoa Hà Nội",
-        year: "2015",
-        focus: "Tổng hợp hữu cơ và Xúc tác"
-      },
-      {
-        degree: "Thạc sĩ Giáo dục Hóa học",
-        institution: "Đại học Quốc gia Việt Nam",
-        year: "2011",
-        focus: "Phương pháp sư phạm trong giáo dục khoa học"
-      },
-      {
-        degree: "Cử nhân Hóa học",
-        institution: "Đại học Khoa học Tự nhiên Hà Nội",
-        year: "2009",
+        degree: "Cử nhân Sư Phạm Hóa học",
+        institution: "Đại học Sư phạm Hồ Chí Minh",
+        year: "2026",
         focus: "Hóa phân tích và Hóa lý"
       }
     ],
     achievementsTitle: "Thành tựu nổi bật",
     achievements: [
-      "Hơn 15 năm giảng dạy hóa học THPT",
-      "25+ bài báo phản biện về giáo dục hóa học",
-      "Giải thưởng Nhà giáo Xuất sắc Cấp quốc gia (2020)",
-      "Phát triển chương trình đổi mới được 50+ trường áp dụng",
-      "Cố vấn cho 200+ học sinh theo đuổi các ngành STEM"
+      "Có nhiều năm kinh nghiệm giảng dạy hóa học THPT",
+      "Tham gia tích cực phản biện về giáo dục hóa học",
+      "Giải Nhất NCKH Khoa Hóa học 2025",
+      "Giải Nhất NCKH khoa Hóa học 2024",
+      "Giải Ba Olympic Hóa học sinh viên toàn quốc lần thứ XII - 2025",
+      "Giải Ba Olympic Hóa học sinh viên toàn quốc lần thứ XI - 2023",
+      "Học bổng Odon Vallet 2024",
+      "UE awards"
     ],
     contactTitle: "Liên hệ",
-    contactLead: "Bạn quan tâm thảo luận về giáo dục hóa học hoặc cơ hội hợp tác?",
+    contactLead:
+      "Bạn quan tâm thảo luận về giáo dục hóa học hoặc cơ hội hợp tác?",
     contactCta: "Liên hệ →"
   }
 };
+
 
 const About = () => {
   const { language, toggleLanguage } = useLanguage();
