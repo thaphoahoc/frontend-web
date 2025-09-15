@@ -110,3 +110,95 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+h1 { font-size: 2.25rem; border-bottom: 2px solid #e2e8f0; padding-bottom: .3em; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+/* Text elements */
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 700;
+  color: #111;
+}
+
+/* Lists */
+ul, ol {
+  margin: 1em 0 1em 1.5em;
+  padding: 0;
+}
+li {
+  margin: 0.5em 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: #f1f5f9;
+}
+
+th, td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+tr:nth-child(even) tbody tr {
+  background-color: #f8fafc;
+}
+
+/* Meta & Title tags aren't directly visible,
+   but set good defaults for SEO and scaling */
+meta,
+title {
+  /* No visual styles needed */
+}
+
