@@ -203,6 +203,18 @@ const About = () => {
             {/* Education */}
             <Card>
               <CardHeader>
+              </CardHeader>
+              <CardContent>
+                <img 
+                    src="/avatar.jpeg" 
+                    alt="Education" 
+                    className="w-full h-auto rounded-md mb-4"
+                />
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
                 <CardTitle className="font-serif">{t.educationTitle}</CardTitle>
               </CardHeader>
               <CardContent>
