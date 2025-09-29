@@ -1,573 +1,1251 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <title>
-        </title>
+        <title> </title>
         <style>
-            body { text-align:justify; font-family:Calibri; font-size:10pt }
-            h1, h2, h3, h4, h5, h6, p { margin:0pt 1pt }
-            li, table { margin-top:0pt; margin-bottom:0pt }
-            h1 { page-break-inside:auto; page-break-after:auto; font-family:SimSun; font-size:24pt; font-weight:bold; color:#000000 }
-            h2 { page-break-inside:auto; page-break-after:auto; font-family:SimSun; font-size:18pt; font-weight:bold; color:#000000 }
-            h3 { margin:13pt 1pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:173%; font-family:Calibri; font-size:16pt; font-weight:bold; color:#000000 }
-            h4 { margin:14pt 1pt 14.5pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:157%; font-family:Calibri; font-size:14pt; font-weight:bold; font-style:normal; color:#000000 }
-            h5 { margin:14pt 1pt 14.5pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:157%; font-family:Calibri; font-size:14pt; font-weight:bold; color:#000000 }
-            h6 { margin:12pt 1pt 3.2pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:133%; font-family:Calibri; font-size:12pt; font-weight:bold; font-style:normal; color:#000000 }
-            .Heading7 { margin:12pt 1pt 3.2pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:133%; font-family:Calibri; font-size:12pt; font-weight:bold }
-            .Heading8 { margin:12pt 1pt 3.2pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:133%; font-family:Calibri; font-size:12pt; font-weight:normal }
-            .Heading9 { margin:12pt 1pt 3.2pt; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:133%; font-family:Calibri; font-size:10pt; font-weight:normal }
-            .BalloonText { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri; font-size:8pt }
-            .BlockText { margin-right:72pt; margin-left:72pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .BodyText { margin-right:1pt; margin-left:1pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .BodyText2 { margin-right:1pt; margin-left:1pt; margin-bottom:6pt; text-align:justify; line-height:200%; font-family:Calibri }
-            .BodyText3 { margin-right:1pt; margin-left:1pt; margin-bottom:6pt; text-align:justify; font-family:Calibri; font-size:8pt }
-            .BodyTextFirstIndent { margin-right:1pt; margin-left:1pt; margin-bottom:6pt; text-indent:21pt; text-align:justify; font-family:Calibri }
-            .BodyTextFirstIndent2 { margin-right:1pt; margin-left:21pt; margin-bottom:6pt; text-indent:21pt; text-align:justify; font-family:Calibri }
-            .BodyTextIndent { margin-right:1pt; margin-left:21pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .BodyTextIndent2 { margin-right:1pt; margin-left:21pt; margin-bottom:6pt; text-align:justify; line-height:200%; font-family:Calibri }
-            .BodyTextIndent3 { margin-right:1pt; margin-left:21pt; margin-bottom:6pt; text-align:justify; font-family:Calibri; font-size:8pt }
-            .Caption { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Arial }
-            .Closing { margin-right:1pt; margin-left:5pt; text-align:justify; font-family:Calibri }
-            .CommentSubject { margin-right:1pt; margin-left:1pt; text-align:left; font-family:Calibri; font-weight:bold }
-            .CommentText { margin-right:1pt; margin-left:1pt; text-align:left; font-family:Calibri }
-            .Date { margin-right:1pt; margin-left:5pt; text-align:justify; font-family:Calibri }
-            .DocumentMap { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri; background-color:#000080 }
-            .E-mailSignature { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri }
-            .EndnoteText { margin-right:1pt; margin-left:1pt; text-align:left; font-family:Calibri }
-            .EnvelopeAddress { margin-right:1pt; margin-left:5pt; text-align:justify; font-family:Arial; font-size:12pt }
-            .EnvelopeReturn { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Arial }
-            .Footer { margin-right:1pt; margin-left:1pt; text-align:left; font-family:Calibri; font-size:9pt }
-            .FootnoteText { margin-right:1pt; margin-left:1pt; text-align:left; font-family:Calibri; font-size:9pt }
-            .HTMLAddress { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri; font-style:italic }
-            .HTMLPreformatted { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:'Courier New' }
-            .Header { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri; font-size:9pt }
-            .Index1 { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri }
-            .Index2 { margin-right:1pt; margin-left:10pt; text-align:justify; font-family:Calibri }
-            .Index3 { margin-right:1pt; margin-left:20pt; text-align:justify; font-family:Calibri }
-            .Index4 { margin-right:1pt; margin-left:30pt; text-align:justify; font-family:Calibri }
-            .Index5 { margin-right:1pt; margin-left:40pt; text-align:justify; font-family:Calibri }
-            .Index6 { margin-right:1pt; margin-left:50pt; text-align:justify; font-family:Calibri }
-            .Index7 { margin-right:1pt; margin-left:60pt; text-align:justify; font-family:Calibri }
-            .Index8 { margin-right:1pt; margin-left:70pt; text-align:justify; font-family:Calibri }
-            .Index9 { margin-right:1pt; margin-left:80pt; text-align:justify; font-family:Calibri }
-            .IndexHeading { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Arial; font-weight:bold }
-            .List { margin-right:1pt; margin-left:10pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .List2 { margin-right:1pt; margin-left:5pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .List3 { margin-right:1pt; margin-left:5pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .List4 { margin-right:1pt; margin-left:5pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .List5 { margin-right:1pt; margin-left:5pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .ListBullet { margin-right:1pt; margin-left:18pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListBullet2 { margin-right:1pt; margin-left:39pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListBullet3 { margin-right:1pt; margin-left:60pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListBullet4 { margin-right:1pt; margin-left:81pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListBullet5 { margin-right:1pt; margin-left:102pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListContinue { margin-right:1pt; margin-left:21pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .ListContinue2 { margin-right:1pt; margin-left:42pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .ListContinue3 { margin-right:1pt; margin-left:63pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .ListContinue4 { margin-right:1pt; margin-left:84pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .ListContinue5 { margin-right:1pt; margin-left:105pt; margin-bottom:6pt; text-align:justify; font-family:Calibri }
-            .ListNumber { margin-right:1pt; margin-left:18pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListNumber2 { margin-right:1pt; margin-left:39pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListNumber3 { margin-right:1pt; margin-left:60pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListNumber4 { margin-right:1pt; margin-left:81pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .ListNumber5 { margin-right:1pt; margin-left:102pt; text-indent:-18pt; text-align:justify; font-family:Calibri }
-            .Macro { margin-right:1pt; margin-left:1pt; text-align:justify; widows:0; orphans:0; font-family:'Courier New'; font-size:12pt }
-            .MessageHeader { margin-right:1pt; margin-left:54pt; text-indent:-54pt; text-align:justify; border:0.75pt solid #000000; padding:1pt; font-family:Arial; font-size:12pt; background-color:#cccccc }
-            .NormalWeb { font-size:12pt }
-            .NormalIndent { margin-right:1pt; margin-left:1pt; text-indent:21pt; text-align:justify; font-family:Calibri }
-            .NoteHeading { margin-right:1pt; margin-left:1pt; text-align:center; font-family:Calibri }
-            .PlainText { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:SimSun }
-            .Salutation { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri }
-            .Signature { margin-right:1pt; margin-left:5pt; text-align:justify; font-family:Calibri }
-            .Subtitle { margin:12pt 1pt 3pt; text-align:center; line-height:130%; font-family:Arial; font-size:16pt; font-weight:bold }
-            .TOAHeading { margin-top:6pt; margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Arial; font-size:12pt }
-            .TOC1 { margin-right:1pt; margin-left:1pt; text-align:justify; font-family:Calibri }
-            .TOC2 { margin-right:1pt; margin-left:21pt; text-align:justify; font-family:Calibri }
-            .TOC3 { margin-right:1pt; margin-left:42pt; text-align:justify; font-family:Calibri }
-            .TOC4 { margin-right:1pt; margin-left:63pt; text-align:justify; font-family:Calibri }
-            .TOC5 { margin-right:1pt; margin-left:84pt; text-align:justify; font-family:Calibri }
-            .TOC6 { margin-right:1pt; margin-left:105pt; text-align:justify; font-family:Calibri }
-            .TOC7 { margin-right:1pt; margin-left:126pt; text-align:justify; font-family:Calibri }
-            .TOC8 { margin-right:1pt; margin-left:147pt; text-align:justify; font-family:Calibri }
-            .TOC9 { margin-right:1pt; margin-left:168pt; text-align:justify; font-family:Calibri }
-            .TableofAuthorities { margin-right:1pt; margin-left:21pt; text-align:justify; font-family:Calibri }
-            .TableofFigures { margin-right:1pt; margin-left:10pt; text-indent:-10pt; text-align:justify; font-family:Calibri }
-            .Title { margin:12pt 1pt 3pt; text-align:center; font-family:Arial; font-size:16pt; font-weight:bold }
-            span.CommentReference { font-size:10.5pt }
-            span.Emphasis { font-style:italic }
-            span.EndnoteReference { vertical-align:super }
-            span.FollowedHyperlink { text-decoration:underline; color:#800080 }
-            span.FootnoteReference { vertical-align:super }
-            span.HTMLCite { font-style:italic }
-            span.HTMLCode { font-family:'Courier New'; font-size:10pt }
-            span.HTMLDefinition { font-style:italic }
-            span.HTMLKeyboard { font-family:'Courier New'; font-size:10pt }
-            span.HTMLSample { font-family:'Courier New' }
-            span.HTMLTypewriter { font-family:'Courier New'; font-size:10pt }
-            span.HTMLVariable { font-style:italic }
-            span.Hyperlink { text-decoration:underline; color:#0000ff }
-            span.Strong { font-weight:bold }
-            .awlist1 { list-style:none; counter-reset:awlistcounter12_0 }
-            .awlist1 > li:before { content:''; counter-increment:awlistcounter12_0 }
-            .awlist2 { list-style:none; counter-reset:awlistcounter13_0 }
-            .awlist2 > li:before { content:''; counter-increment:awlistcounter13_0 }
-            .awlist3 { list-style:none; counter-reset:awlistcounter14_0 }
-            .awlist3 > li:before { content:''; counter-increment:awlistcounter14_0 }
-            .awlist4 { list-style:none; counter-reset:awlistcounter15_0 }
-            .awlist4 > li:before { content:''; counter-increment:awlistcounter15_0 }
-            .awlist5 { list-style:none; counter-reset:awlistcounter11_0 }
-            .awlist5 > li:before { content:'－'; counter-increment:awlistcounter11_0 }
-            @media (max-width: 900px) { 
-            img { 
-            max-width: 100%;
-            height: auto;
+            body {
+                text-align: justify;
+                font-family: Calibri;
+                font-size: 10pt;
             }
-            .table-container {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                margin: 0pt 1pt;
             }
+            li,
             table {
-            width: 100%;
-            border-collapse: collapse;
+                margin-top: 0pt;
+                margin-bottom: 0pt;
             }
-            td, th {
-            padding: 8px;
-            text-align: left;
-            border: 1px solid #ddd;
+            h1 {
+                page-break-inside: auto;
+                page-break-after: auto;
+                font-family: SimSun;
+                font-size: 24pt;
+                font-weight: bold;
+                color: #000000;
             }
-            }	
+            h2 {
+                page-break-inside: auto;
+                page-break-after: auto;
+                font-family: SimSun;
+                font-size: 18pt;
+                font-weight: bold;
+                color: #000000;
+            }
+            h3 {
+                margin: 13pt 1pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 173%;
+                font-family: Calibri;
+                font-size: 16pt;
+                font-weight: bold;
+                color: #000000;
+            }
+            h4 {
+                margin: 14pt 1pt 14.5pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 157%;
+                font-family: Calibri;
+                font-size: 14pt;
+                font-weight: bold;
+                font-style: normal;
+                color: #000000;
+            }
+            h5 {
+                margin: 14pt 1pt 14.5pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 157%;
+                font-family: Calibri;
+                font-size: 14pt;
+                font-weight: bold;
+                color: #000000;
+            }
+            h6 {
+                margin: 12pt 1pt 3.2pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 133%;
+                font-family: Calibri;
+                font-size: 12pt;
+                font-weight: bold;
+                font-style: normal;
+                color: #000000;
+            }
+            .Heading7 {
+                margin: 12pt 1pt 3.2pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 133%;
+                font-family: Calibri;
+                font-size: 12pt;
+                font-weight: bold;
+            }
+            .Heading8 {
+                margin: 12pt 1pt 3.2pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 133%;
+                font-family: Calibri;
+                font-size: 12pt;
+                font-weight: normal;
+            }
+            .Heading9 {
+                margin: 12pt 1pt 3.2pt;
+                text-align: justify;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                line-height: 133%;
+                font-family: Calibri;
+                font-size: 10pt;
+                font-weight: normal;
+            }
+            .BalloonText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+                font-size: 8pt;
+            }
+            .BlockText {
+                margin-right: 72pt;
+                margin-left: 72pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .BodyText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .BodyText2 {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                line-height: 200%;
+                font-family: Calibri;
+            }
+            .BodyText3 {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+                font-size: 8pt;
+            }
+            .BodyTextFirstIndent {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                margin-bottom: 6pt;
+                text-indent: 21pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .BodyTextFirstIndent2 {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                margin-bottom: 6pt;
+                text-indent: 21pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .BodyTextIndent {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .BodyTextIndent2 {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                line-height: 200%;
+                font-family: Calibri;
+            }
+            .BodyTextIndent3 {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+                font-size: 8pt;
+            }
+            .Caption {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Arial;
+            }
+            .Closing {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .CommentSubject {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: left;
+                font-family: Calibri;
+                font-weight: bold;
+            }
+            .CommentText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: left;
+                font-family: Calibri;
+            }
+            .Date {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .DocumentMap {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+                background-color: #000080;
+            }
+            .E-mailSignature {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .EndnoteText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: left;
+                font-family: Calibri;
+            }
+            .EnvelopeAddress {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-align: justify;
+                font-family: Arial;
+                font-size: 12pt;
+            }
+            .EnvelopeReturn {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Arial;
+            }
+            .Footer {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: left;
+                font-family: Calibri;
+                font-size: 9pt;
+            }
+            .FootnoteText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: left;
+                font-family: Calibri;
+                font-size: 9pt;
+            }
+            .HTMLAddress {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+                font-style: italic;
+            }
+            .HTMLPreformatted {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: "Courier New";
+            }
+            .Header {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+                font-size: 9pt;
+            }
+            .Index1 {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index2 {
+                margin-right: 1pt;
+                margin-left: 10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index3 {
+                margin-right: 1pt;
+                margin-left: 20pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index4 {
+                margin-right: 1pt;
+                margin-left: 30pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index5 {
+                margin-right: 1pt;
+                margin-left: 40pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index6 {
+                margin-right: 1pt;
+                margin-left: 50pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index7 {
+                margin-right: 1pt;
+                margin-left: 60pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index8 {
+                margin-right: 1pt;
+                margin-left: 70pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Index9 {
+                margin-right: 1pt;
+                margin-left: 80pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .IndexHeading {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Arial;
+                font-weight: bold;
+            }
+            .List {
+                margin-right: 1pt;
+                margin-left: 10pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .List2 {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .List3 {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .List4 {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .List5 {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListBullet {
+                margin-right: 1pt;
+                margin-left: 18pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListBullet2 {
+                margin-right: 1pt;
+                margin-left: 39pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListBullet3 {
+                margin-right: 1pt;
+                margin-left: 60pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListBullet4 {
+                margin-right: 1pt;
+                margin-left: 81pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListBullet5 {
+                margin-right: 1pt;
+                margin-left: 102pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListContinue {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListContinue2 {
+                margin-right: 1pt;
+                margin-left: 42pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListContinue3 {
+                margin-right: 1pt;
+                margin-left: 63pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListContinue4 {
+                margin-right: 1pt;
+                margin-left: 84pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListContinue5 {
+                margin-right: 1pt;
+                margin-left: 105pt;
+                margin-bottom: 6pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListNumber {
+                margin-right: 1pt;
+                margin-left: 18pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListNumber2 {
+                margin-right: 1pt;
+                margin-left: 39pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListNumber3 {
+                margin-right: 1pt;
+                margin-left: 60pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListNumber4 {
+                margin-right: 1pt;
+                margin-left: 81pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .ListNumber5 {
+                margin-right: 1pt;
+                margin-left: 102pt;
+                text-indent: -18pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Macro {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                widows: 0;
+                orphans: 0;
+                font-family: "Courier New";
+                font-size: 12pt;
+            }
+            .MessageHeader {
+                margin-right: 1pt;
+                margin-left: 54pt;
+                text-indent: -54pt;
+                text-align: justify;
+                border: 0.75pt solid #000000;
+                padding: 1pt;
+                font-family: Arial;
+                font-size: 12pt;
+                background-color: #cccccc;
+            }
+            .NormalWeb {
+                font-size: 12pt;
+            }
+            .NormalIndent {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-indent: 21pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .NoteHeading {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: center;
+                font-family: Calibri;
+            }
+            .PlainText {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: SimSun;
+            }
+            .Salutation {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Signature {
+                margin-right: 1pt;
+                margin-left: 5pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Subtitle {
+                margin: 12pt 1pt 3pt;
+                text-align: center;
+                line-height: 130%;
+                font-family: Arial;
+                font-size: 16pt;
+                font-weight: bold;
+            }
+            .TOAHeading {
+                margin-top: 6pt;
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Arial;
+                font-size: 12pt;
+            }
+            .TOC1 {
+                margin-right: 1pt;
+                margin-left: 1pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC2 {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC3 {
+                margin-right: 1pt;
+                margin-left: 42pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC4 {
+                margin-right: 1pt;
+                margin-left: 63pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC5 {
+                margin-right: 1pt;
+                margin-left: 84pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC6 {
+                margin-right: 1pt;
+                margin-left: 105pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC7 {
+                margin-right: 1pt;
+                margin-left: 126pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC8 {
+                margin-right: 1pt;
+                margin-left: 147pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TOC9 {
+                margin-right: 1pt;
+                margin-left: 168pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TableofAuthorities {
+                margin-right: 1pt;
+                margin-left: 21pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .TableofFigures {
+                margin-right: 1pt;
+                margin-left: 10pt;
+                text-indent: -10pt;
+                text-align: justify;
+                font-family: Calibri;
+            }
+            .Title {
+                margin: 12pt 1pt 3pt;
+                text-align: center;
+                font-family: Arial;
+                font-size: 16pt;
+                font-weight: bold;
+            }
+            span.CommentReference {
+                font-size: 10.5pt;
+            }
+            span.Emphasis {
+                font-style: italic;
+            }
+            span.EndnoteReference {
+                vertical-align: super;
+            }
+            span.FollowedHyperlink {
+                text-decoration: underline;
+                color: #800080;
+            }
+            span.FootnoteReference {
+                vertical-align: super;
+            }
+            span.HTMLCite {
+                font-style: italic;
+            }
+            span.HTMLCode {
+                font-family: "Courier New";
+                font-size: 10pt;
+            }
+            span.HTMLDefinition {
+                font-style: italic;
+            }
+            span.HTMLKeyboard {
+                font-family: "Courier New";
+                font-size: 10pt;
+            }
+            span.HTMLSample {
+                font-family: "Courier New";
+            }
+            span.HTMLTypewriter {
+                font-family: "Courier New";
+                font-size: 10pt;
+            }
+            span.HTMLVariable {
+                font-style: italic;
+            }
+            span.Hyperlink {
+                text-decoration: underline;
+                color: #0000ff;
+            }
+            span.Strong {
+                font-weight: bold;
+            }
+            .awlist1 {
+                list-style: none;
+                counter-reset: awlistcounter12_0;
+            }
+            .awlist1 > li:before {
+                content: "";
+                counter-increment: awlistcounter12_0;
+            }
+            .awlist2 {
+                list-style: none;
+                counter-reset: awlistcounter13_0;
+            }
+            .awlist2 > li:before {
+                content: "";
+                counter-increment: awlistcounter13_0;
+            }
+            .awlist3 {
+                list-style: none;
+                counter-reset: awlistcounter14_0;
+            }
+            .awlist3 > li:before {
+                content: "";
+                counter-increment: awlistcounter14_0;
+            }
+            .awlist4 {
+                list-style: none;
+                counter-reset: awlistcounter15_0;
+            }
+            .awlist4 > li:before {
+                content: "";
+                counter-increment: awlistcounter15_0;
+            }
+            .awlist5 {
+                list-style: none;
+                counter-reset: awlistcounter11_0;
+            }
+            .awlist5 > li:before {
+                content: "－";
+                counter-increment: awlistcounter11_0;
+            }
+            @media (max-width: 900px) {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .table-container {
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                td,
+                th {
+                    padding: 8px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                }
+            }
         </style>
     </head>
     <body>
-        <h1 style="margin-right:0pt; margin-left:0pt; margin-bottom:14pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Biên soạn văn bản và bài trình chiếu hiệu quả trong dạy học Hóa học THPT</span>
+        <h1 style="margin-right: 0pt; margin-left: 0pt; margin-bottom: 14pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Biên soạn văn bản và bài trình chiếu hiệu quả trong dạy học Hóa học THPT</span>
         </h1>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">I. Vai trò của ICT trong biên soạn tài liệu và bài trình chiếu môn Hóa học</span>
+        <h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">I. Vai trò của ICT trong biên soạn tài liệu và bài trình chiếu môn Hóa học</span>
         </h2>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Công nghệ thông tin và truyền thông (ICT) mang lại nhiều lợi ích quan trọng trong việc soạn giáo án văn bản và thiết kế bài giảng điện tử cho môn Hóa học cấp THPT. </span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Công nghệ thông tin và truyền thông (ICT) mang lại nhiều lợi ích quan trọng trong việc soạn giáo án văn bản và thiết kế bài giảng điện tử cho môn Hóa học cấp THPT. </span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <span class="Strong" style="font-family:'Times New Roman'">1. Tăng tính trực quan và sinh động cho bài giảng</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <span class="Strong" style="font-family: 'Times New Roman';">1. Tăng tính trực quan và sinh động cho bài giảng</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">ICT cho phép </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">tích hợp đa phương tiện</span><span style="font-family:'Times New Roman'"> (hình ảnh, âm thanh, video, mô hình 3D) vào tài liệu và slide, giúp bài học Hóa học trở nên sinh động và hấp dẫn hơn. Những thí nghiệm hóa học vốn khó thực hiện trên lớp có thể được trình chiếu dưới dạng video hoặc mô phỏng, làm cho giờ học thu hút hơn và kích thích hứng thú học tập của học sinh. Nhờ đó, lớp học trở nên </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">sôi nổi, tương tác</span><span style="font-family:'Times New Roman'">, học sinh tập trung hơn và </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">dễ dàng ghi nhớ kiến thức sâu hơn</span><span style="font-family:'Times New Roman'">.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">ICT cho phép </span><span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">tích hợp đa phương tiện</span>
+            <span style="font-family: 'Times New Roman';">
+                (hình ảnh, âm thanh, video, mô hình 3D) vào tài liệu và slide, giúp bài học Hóa học trở nên sinh động và hấp dẫn hơn. Những thí nghiệm hóa học vốn khó thực hiện trên lớp có thể được trình chiếu dưới dạng video hoặc mô phỏng,
+                làm cho giờ học thu hút hơn và kích thích hứng thú học tập của học sinh. Nhờ đó, lớp học trở nên
+            </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">sôi nổi, tương tác</span><span style="font-family: 'Times New Roman';">, học sinh tập trung hơn và </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">dễ dàng ghi nhớ kiến thức sâu hơn</span><span style="font-family: 'Times New Roman';">.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <span class="Strong" style="font-family:'Times New Roman'">2. Minh họa các kiến thức trừu tượng một cách dễ hiểu</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <span class="Strong" style="font-family: 'Times New Roman';">2. Minh họa các kiến thức trừu tượng một cách dễ hiểu</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Trong Hóa học THPT có nhiều khái niệm trừu tượng (cấu tạo nguyên tử, liên kết hóa học, cơ chế phản ứng, v.v.). ICT giúp giáo viên </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">trực quan hóa</span><span style="font-family:'Times New Roman'"> những nội dung này thông qua mô phỏng và đồ họa. Ví dụ, mô hình 3D của phân tử hoặc cấu trúc mạng tinh thể có thể được chiếu trên slide để học sinh quan sát ở nhiều góc độ. Việc </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">trình bày các kiến thức trừu tượng trở nên dễ dàng hơn</span><span style="font-family:'Times New Roman'"> nhờ hình ảnh và hoạt ảnh minh họa. Điều này khắc phục hạn chế của phương pháp truyền thống (giảng giải suông hoặc vẽ hình đơn giản trên bảng), giúp </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">học sinh hiểu bài nhanh và chính xác</span><span style="font-family:'Times New Roman'"> hơn.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Trong Hóa học THPT có nhiều khái niệm trừu tượng (cấu tạo nguyên tử, liên kết hóa học, cơ chế phản ứng, v.v.). ICT giúp giáo viên </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">trực quan hóa</span>
+            <span style="font-family: 'Times New Roman';">
+                những nội dung này thông qua mô phỏng và đồ họa. Ví dụ, mô hình 3D của phân tử hoặc cấu trúc mạng tinh thể có thể được chiếu trên slide để học sinh quan sát ở nhiều góc độ. Việc
+            </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">trình bày các kiến thức trừu tượng trở nên dễ dàng hơn</span>
+            <span style="font-family: 'Times New Roman';"> nhờ hình ảnh và hoạt ảnh minh họa. Điều này khắc phục hạn chế của phương pháp truyền thống (giảng giải suông hoặc vẽ hình đơn giản trên bảng), giúp </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">học sinh hiểu bài nhanh và chính xác</span><span style="font-family: 'Times New Roman';"> hơn.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <span class="Strong" style="font-family:'Times New Roman'">3. Mở rộng nội dung bài học và gắn kiến thức với thực tiễn</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <span class="Strong" style="font-family: 'Times New Roman';">3. Mở rộng nội dung bài học và gắn kiến thức với thực tiễn</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">ICT cung cấp khả năng truy cập kho tài nguyên kiến thức khổng lồ trên internet, giúp giáo viên </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">cập nhật thông tin mới</span><span style="font-family:'Times New Roman'"> và mở rộng nội dung bài giảng. Giáo viên có thể chèn thêm các hình ảnh thực tế về ứng dụng hóa học (như ảnh nhà máy, thí nghiệm thực tế, sản phẩm đời sống) hoặc đoạn phim khoa học vào bài trình chiếu. Nhờ đó, học sinh </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">liên hệ kiến thức với thực tiễn nhiều hơn</span><span style="font-family:'Times New Roman'">, thấy được vai trò của hóa học trong cuộc sống. Chẳng hạn, khi học về oxi hóa – khử, giáo viên có thể chiếu video về sự ăn mòn kim loại hoặc phản ứng pin điện hóa, giúp học sinh hiểu rõ ý nghĩa thực tiễn của bài học.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">ICT cung cấp khả năng truy cập kho tài nguyên kiến thức khổng lồ trên internet, giúp giáo viên </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">cập nhật thông tin mới</span>
+            <span style="font-family: 'Times New Roman';">
+                và mở rộng nội dung bài giảng. Giáo viên có thể chèn thêm các hình ảnh thực tế về ứng dụng hóa học (như ảnh nhà máy, thí nghiệm thực tế, sản phẩm đời sống) hoặc đoạn phim khoa học vào bài trình chiếu. Nhờ đó, học sinh
+            </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">liên hệ kiến thức với thực tiễn nhiều hơn</span>
+            <span style="font-family: 'Times New Roman';">
+                , thấy được vai trò của hóa học trong cuộc sống. Chẳng hạn, khi học về oxi hóa – khử, giáo viên có thể chiếu video về sự ăn mòn kim loại hoặc phản ứng pin điện hóa, giúp học sinh hiểu rõ ý nghĩa thực tiễn của bài học.
+            </span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <span class="Strong" style="font-family:'Times New Roman'">4. Nâng cao hiệu quả soạn thảo và hợp tác của giáo viên</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <span class="Strong" style="font-family: 'Times New Roman';">4. Nâng cao hiệu quả soạn thảo và hợp tác của giáo viên</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Ứng dụng CNTT giúp giáo viên tiết kiệm thời gian và công sức trong việc soạn bài. Các phần mềm soạn thảo </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">cho phép dễ dàng chỉnh sửa, định dạng và tái sử dụng</span><span style="font-family:'Times New Roman'"> nội dung, thay vì viết tay hoặc soạn thủ công. Giáo viên có thể lưu trữ bài giảng trên máy tính hoặc đám mây, chia sẻ cho đồng nghiệp cùng góp ý, hoặc gửi tài liệu cho học sinh qua email, hệ thống quản lý học tập. Nhiều công cụ còn hỗ trợ </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">làm việc nhóm trực tuyến</span><span style="font-family:'Times New Roman'">, cho phép nhiều giáo viên cùng xây dựng bài giảng hoặc góp ý từ xa. Nhờ ICT, việc </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">lưu trữ và phân phối</span><span style="font-family:'Times New Roman'"> tài liệu dạy học cũng thuận tiện hơn (đăng bài giảng lên website trường, dạy học trực tuyến qua Zoom, v.v.), góp phần hiện đại hóa công tác giảng dạy.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Ứng dụng CNTT giúp giáo viên tiết kiệm thời gian và công sức trong việc soạn bài. Các phần mềm soạn thảo </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">cho phép dễ dàng chỉnh sửa, định dạng và tái sử dụng</span>
+            <span style="font-family: 'Times New Roman';">
+                nội dung, thay vì viết tay hoặc soạn thủ công. Giáo viên có thể lưu trữ bài giảng trên máy tính hoặc đám mây, chia sẻ cho đồng nghiệp cùng góp ý, hoặc gửi tài liệu cho học sinh qua email, hệ thống quản lý học tập. Nhiều công
+                cụ còn hỗ trợ
+            </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">làm việc nhóm trực tuyến</span>
+            <span style="font-family: 'Times New Roman';">, cho phép nhiều giáo viên cùng xây dựng bài giảng hoặc góp ý từ xa. Nhờ ICT, việc </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">lưu trữ và phân phối</span>
+            <span style="font-family: 'Times New Roman';"> tài liệu dạy học cũng thuận tiện hơn (đăng bài giảng lên website trường, dạy học trực tuyến qua Zoom, v.v.), góp phần hiện đại hóa công tác giảng dạy.</span>
         </p>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">II. Các công cụ và kỹ thuật hỗ trợ biên soạn văn bản, bài trình chiếu Hóa học</span>
+        <h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">II. Các công cụ và kỹ thuật hỗ trợ biên soạn văn bản, bài trình chiếu Hóa học</span>
         </h2>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Để soạn giáo án và bài trình chiếu hiệu quả, giáo viên Hóa học có thể sử dụng nhiều </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">công cụ phần mềm</span><span style="font-family:'Times New Roman'"> và </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">kỹ thuật thiết kế</span><span style="font-family:'Times New Roman'"> khác nhau. Dưới đây là </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">một số công cụ tiêu biểu</span><span style="font-family:'Times New Roman'"> cùng chức năng chính hỗ trợ dạy học Hóa học:</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Để soạn giáo án và bài trình chiếu hiệu quả, giáo viên Hóa học có thể sử dụng nhiều </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">công cụ phần mềm</span><span style="font-family: 'Times New Roman';"> và </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">kỹ thuật thiết kế</span><span style="font-family: 'Times New Roman';"> khác nhau. Dưới đây là </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">một số công cụ tiêu biểu</span><span style="font-family: 'Times New Roman';"> cùng chức năng chính hỗ trợ dạy học Hóa học:</span>
         </p>
-        <table style="width:104.42%; border:0.75pt solid #000000; padding:0pt; border-spacing:1.5pt">
+        <table style="width: 104.42%; border: 0.75pt solid #000000; padding: 0pt; border-spacing: 1.5pt;">
             <thead>
                 <tr>
-                    <td style="width:27.86%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Công cụ</span>
+                    <td style="width: 27.86%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Công cụ</span>
                         </p>
                     </td>
-                    <td style="width:71.08%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Chức năng chính hỗ trợ soạn giảng Hóa học</span>
+                    <td style="width: 71.08%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Chức năng chính hỗ trợ soạn giảng Hóa học</span>
                         </p>
                     </td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="width:27.86%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Microsoft PowerPoint</span>
+                    <td style="width: 27.86%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Microsoft PowerPoint</span>
                         </p>
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png" alt="Microsoft Office PowerPoint Logo" style="max-width: 100%; height: auto;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%;">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"
+                                alt="Microsoft Office PowerPoint Logo"
+                                style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+                            />
                         </p>
                     </td>
-                    <td style="width:71.08%; border:0.75pt solid #000000; padding:0.75pt">
-                        <ul class="awlist1" style="margin:0pt; padding-left:0pt">
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Tạo bài trình chiếu chuyên nghiệp</span>
+                    <td style="width: 71.08%; border: 0.75pt solid #000000; padding: 0.75pt;">
+                        <ul class="awlist1" style="margin: 0pt; padding-left: 0pt;">
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Tạo bài trình chiếu chuyên nghiệp</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Chèn hình ảnh, video, âm thanh, biểu đồ</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Chèn hình ảnh, video, âm thanh, biểu đồ</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Hỗ trợ mô hình 3D (ví dụ: mô hình phân tử)</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Hỗ trợ mô hình 3D (ví dụ: mô hình phân tử)</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Trình chiếu trực tuyến</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family: 'Times New Roman';">Trình chiếu trực tuyến</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol">
-                                <span style="width:12.51pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:150%; font-family:'Times New Roman'; font-size:12pt">Tính năng đám mây lưu trữ và hợp tác</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol;">
+                                <span style="width: 12.51pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 12pt;">Tính năng đám mây lưu trữ và hợp tác</span>
                             </li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:27.86%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Microsoft Word</span>
+                    <td style="width: 27.86%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Microsoft Word</span>
                         </p>
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzw4zM8bYkbqu4rxIuBXcIq1vIZKSC6LIyAg&amp;s" alt="Image">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzw4zM8bYkbqu4rxIuBXcIq1vIZKSC6LIyAg&amp;s" alt="Image" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" />
                         </p>
                     </td>
-                    <td style="width:71.08%; border:0.75pt solid #000000; padding:0.75pt">
-                        <ul class="awlist2" style="margin:0pt; padding-left:0pt">
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Soạn thảo giáo án và tài liệu học tập</span>
+                    <td style="width: 71.08%; border: 0.75pt solid #000000; padding: 0.75pt;">
+                        <ul class="awlist2" style="margin: 0pt; padding-left: 0pt;">
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Soạn thảo giáo án và tài liệu học tập</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Hỗ trợ định dạng văn bản và bảng biểu</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Hỗ trợ định dạng văn bản và bảng biểu</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Equation Editor cho công thức hóa học, phương trình phản ứng. </span><em><span style="font-family:'Times New Roman'; ">Ví dụ: </span></em><span style="font-family:'Times New Roman'">H</span><span style="line-height:150%; font-family:'Times New Roman'; font-size:8pt; "><sub>2</sub></span><span style="font-family:'Times New Roman'">SO</span><span style="line-height:150%; font-family:'Times New Roman'; font-size:8pt; "><sub>4</sub></span><span style="font-family:'Times New Roman'">, H</span><span style="line-height:150%; font-family:'Times New Roman'; font-size:8pt; "><sub>2</sub></span><span style="font-family:'Times New Roman'"> + O</span><span style="line-height:150%; font-family:'Times New Roman'; font-size:8pt; "><sub>2</sub></span><span style="font-family:'Times New Roman'"> </span><img src="1759140814_ict-3/1759140814_ict-3-1.png" width="14" height="21" alt="" style="vertical-align:middle" /><span style="font-family:'Times New Roman'"> H</span><span style="line-height:150%; font-family:'Times New Roman'; font-size:8pt; "><sub>2</sub></span><span style="font-family:'Times New Roman'">O</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Equation Editor cho công thức hóa học, phương trình phản ứng. </span><em><span style="font-family: 'Times New Roman';">Ví dụ: </span></em>
+                                <span style="font-family: 'Times New Roman';">H</span><span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 8pt;"><sub>2</sub></span>
+                                <span style="font-family: 'Times New Roman';">SO</span><span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 8pt;"><sub>4</sub></span>
+                                <span style="font-family: 'Times New Roman';">, H</span><span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 8pt;"><sub>2</sub></span>
+                                <span style="font-family: 'Times New Roman';"> + O</span><span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 8pt;"><sub>2</sub></span>
+                                <span style="font-family: 'Times New Roman';"> </span>
+                                <img src="1759140814_ict-3/1759140814_ict-3-1.png" width="50%" height="auto" alt="" 
+                                style="max-width: 50%; height: auto; display: block; margin: 0 auto;"
+                                <span style="font-family: 'Times New Roman';"> H</span><span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 8pt;"><sub>2</sub></span>
+                                <span style="font-family: 'Times New Roman';">O</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol">
-                                <span style="width:12.51pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:150%; font-family:'Times New Roman'; font-size:12pt">Google Docs hỗ trợ làm việc nhóm trực tuyến, nhiều giáo viên cùng biên soạn và góp ý trên một tài liệu.</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol;">
+                                <span style="width: 12.51pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 12pt;">Google Docs hỗ trợ làm việc nhóm trực tuyến, nhiều giáo viên cùng biên soạn và góp ý trên một tài liệu.</span>
                             </li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:27.86%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Phần mềm vẽ cấu trúc hóa học</span>
+                    <td style="width: 27.86%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Phần mềm vẽ cấu trúc hóa học</span>
                         </p>
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Emphasis" style="font-family:'Times New Roman'">(ví dụ: ChemSketch, ChemDraw...)</span>
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Emphasis" style="font-family: 'Times New Roman';">(ví dụ: ChemSketch, ChemDraw...)</span>
                         </p>
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95IPAmUI5454mJNROrowWnVWO-blWnplLiA&amp;s" style="text-decoration:none">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95IPAmUI5454mJNROrowWnVWO-blWnplLiA&amp;s" alt="ChemSketch Example" style="max-width:100%; height:auto;" />
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95IPAmUI5454mJNROrowWnVWO-blWnplLiA&amp;s" style="text-decoration: none;">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95IPAmUI5454mJNROrowWnVWO-blWnplLiA&amp;s" alt="ChemSketch Example" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" />
                             </a>
                         </p>
                     </td>
-                    <td style="width:71.08%; border:0.75pt solid #000000; padding:0.75pt">
-                        <ul class="awlist3" style="margin:0pt; padding-left:0pt">
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Vẽ công thức cấu tạo hợp chất chi tiết</span>
+                    <td style="width: 71.08%; border: 0.75pt solid #000000; padding: 0.75pt;">
+                        <ul class="awlist3" style="margin: 0pt; padding-left: 0pt;">
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Vẽ công thức cấu tạo hợp chất chi tiết</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Thư viện ký hiệu hóa học (liên kết, vòng benzen, mũi tên phản ứng)</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Thư viện ký hiệu hóa học (liên kết, vòng benzen, mũi tên phản ứng)</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Chuyển đổi cấu trúc 2D sang mô hình 3D</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Chuyển đổi cấu trúc 2D sang mô hình 3D</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol">
-                                <span style="width:12.51pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:150%; font-family:'Times New Roman'; font-size:12pt">Tạo hình ảnh phân tử, sơ đồ thí nghiệm, đồ thị chất lượng cao</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol;">
+                                <span style="width: 12.51pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 12pt;">Tạo hình ảnh phân tử, sơ đồ thí nghiệm, đồ thị chất lượng cao</span>
                             </li>
                         </ul>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:27.86%; border:0.75pt solid #000000; padding:0.75pt; vertical-align:top">
-                        <p style="text-align:center; line-height:150%; font-size:12pt">
-                            <span class="Strong" style="font-family:'Times New Roman'">Phần mềm mô phỏng thí nghiệm</span><span style="font-family:'Times New Roman'"> </span><span class="Emphasis" style="font-family:'Times New Roman'">(ví dụ: PhET Interactive Simulations)</span>
+                    <td style="width: 27.86%; border: 0.75pt solid #000000; padding: 0.75pt; vertical-align: top;">
+                        <p style="text-align: center; line-height: 150%; font-size: 12pt;">
+                            <span class="Strong" style="font-family: 'Times New Roman';">Phần mềm mô phỏng thí nghiệm</span><span style="font-family: 'Times New Roman';"> </span>
+                            <span class="Emphasis" style="font-family: 'Times New Roman';">(ví dụ: PhET Interactive Simulations)</span>
                         </p>
-                        <p style="text-indent:14.2pt; text-align:center; line-height:150%; font-size:12pt">
-                            <a href="https://phet.colorado.edu/images/phet-social-media-logo.png" style="text-decoration:none">
-                                <img src="https://phet.colorado.edu/images/phet-social-media-logo.png" alt="PhET Social Media Logo" style="max-width:100%; height:auto;">
+                        <p style="text-indent: 14.2pt; text-align: center; line-height: 150%; font-size: 12pt;">
+                            <a href="https://phet.colorado.edu/images/phet-social-media-logo.png" style="text-decoration: none;">
+                                <img src="https://phet.colorado.edu/images/phet-social-media-logo.png" alt="PhET Social Media Logo" style="max-width: 50%; height: auto; display: block; margin: 0 auto;" />
                             </a>
                         </p>
                     </td>
-                    <td style="width:71.08%; border:0.75pt solid #000000; padding:0.75pt">
-                        <ul class="awlist4" style="margin:0pt; padding-left:0pt">
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Mô phỏng tương tác thí nghiệm hóa học</span>
+                    <td style="width: 71.08%; border: 0.75pt solid #000000; padding: 0.75pt;">
+                        <ul class="awlist4" style="margin: 0pt; padding-left: 0pt;">
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Mô phỏng tương tác thí nghiệm hóa học</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Cho phép học sinh tương tác trực tiếp —— Kéo thả, điều chỉnh thông số</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Cho phép học sinh tương tác trực tiếp —— Kéo thả, điều chỉnh thông số</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol; font-size:12pt">
-                                <span style="width:11.41pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Times New Roman'">Chèn mô phỏng vào slide PowerPoint</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol; font-size: 12pt;">
+                                <span style="width: 11.41pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="font-family: 'Times New Roman';">Chèn mô phỏng vào slide PowerPoint</span>
                             </li>
-                            <li style="margin-right:1pt; margin-left:35.7pt; text-indent:-18pt; line-height:150%; font-family:Symbol">
-                                <span style="width:12.51pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="line-height:150%; font-family:'Times New Roman'; font-size:12pt">Giúp kiểm chứng lý thuyết thông qua thí nghiệm ảo</span>
+                            <li style="margin-right: 1pt; margin-left: 35.7pt; text-indent: -18pt; line-height: 150%; font-family: Symbol;">
+                                <span style="width: 12.51pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+                                <span style="line-height: 150%; font-family: 'Times New Roman'; font-size: 12pt;">Giúp kiểm chứng lý thuyết thông qua thí nghiệm ảo</span>
                             </li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <strong><span style="font-family:'Times New Roman'; ">Một số công cụ giành riêng cho Hóa học</span></strong>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <strong><span style="font-family: 'Times New Roman';">Một số công cụ giành riêng cho Hóa học</span></strong>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <img
-                src = "/ict3_02.png"
-                alt = "Hình 1: Giao diện phần mềm ChemSketch"
-                style = "max-width: 100%; height: auto;"
-            />
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <img src="/ict3_02.png" alt="Hình 1: Giao diện phần mềm ChemSketch" style="max-width: 100%; height: auto;" />
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Ngoài các công cụ trên, giáo viên còn có thể ứng dụng nhiều </span><strong><span style="font-family:'Times New Roman'; ">kỹ thuật</span></strong><span style="font-family:'Times New Roman'"> soạn giảng khác:</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Ngoài các công cụ trên, giáo viên còn có thể ứng dụng nhiều </span><strong><span style="font-family: 'Times New Roman';">kỹ thuật</span></strong>
+            <span style="font-family: 'Times New Roman';"> soạn giảng khác:</span>
         </p>
-        <ul class="awlist5" style="margin:0pt; padding-left:0pt">
-            <li class="NormalWeb" style="margin-top:14pt; margin-left:20.9pt; text-indent:0.4pt; line-height:150%; font-family:SimSun; list-style-position:inside">
-                <span style="width:2.7pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0; </span><span style="font-family:'Times New Roman'">S</span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">ử dụng bảng tương tác</span>
+        <ul class="awlist5" style="margin: 0pt; padding-left: 0pt;">
+            <li class="NormalWeb" style="margin-top: 14pt; margin-left: 20.9pt; text-indent: 0.4pt; line-height: 150%; font-family: SimSun; list-style-position: inside;">
+                <span style="width: 2.7pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0; </span><span style="font-family: 'Times New Roman';">S</span>
+                <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">ử dụng bảng tương tác</span>
             </li>
-            <li class="NormalWeb" style="margin-left:20.9pt; text-indent:0.4pt; line-height:150%; font-family:SimSun; list-style-position:inside">
-                <span style="width:2.7pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0; </span><span style="font-family:'Times New Roman'">Hệ thống phản hồi nhanh (ví dụ: phần mềm quiz như Kahoot) để tăng tính tương tác</span>
+            <li class="NormalWeb" style="margin-left: 20.9pt; text-indent: 0.4pt; line-height: 150%; font-family: SimSun; list-style-position: inside;">
+                <span style="width: 2.7pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0; </span>
+                <span style="font-family: 'Times New Roman';">Hệ thống phản hồi nhanh (ví dụ: phần mềm quiz như Kahoot) để tăng tính tương tác</span>
             </li>
-            <li class="NormalWeb" style="margin-left:20.9pt; margin-bottom:14pt; text-indent:0.4pt; line-height:150%; font-family:SimSun; list-style-position:inside">
-                <span style="width:2.7pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0; </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">Prezi</span><span style="font-family:'Times New Roman'"> để trình bày bài giảng dưới dạng sơ đồ trực quan.</span>
+            <li class="NormalWeb" style="margin-left: 20.9pt; margin-bottom: 14pt; text-indent: 0.4pt; line-height: 150%; font-family: SimSun; list-style-position: inside;">
+                <span style="width: 2.7pt; font: 7pt 'Times New Roman'; display: inline-block;">&#xa0; </span><span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">Prezi</span>
+                <span style="font-family: 'Times New Roman';"> để trình bày bài giảng dưới dạng sơ đồ trực quan.</span>
             </li>
         </ul>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">&#xa0;</span><span style="font-family:'Times New Roman'">Mục tiêu chung là tận dụng ICT để </span><span class="Strong" style="font-family:'Times New Roman'">nâng cao chất lượng trình bày</span><span style="font-family:'Times New Roman'">: văn bản rõ ràng dễ đọc, slide hấp dẫn logic, và có sự hỗ trợ của hình ảnh, thí nghiệm ảo giúp học sinh hiểu bài sâu hơn.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">&#xa0;</span><span style="font-family: 'Times New Roman';">Mục tiêu chung là tận dụng ICT để </span>
+            <span class="Strong" style="font-family: 'Times New Roman';">nâng cao chất lượng trình bày</span>
+            <span style="font-family: 'Times New Roman';">: văn bản rõ ràng dễ đọc, slide hấp dẫn logic, và có sự hỗ trợ của hình ảnh, thí nghiệm ảo giúp học sinh hiểu bài sâu hơn.</span>
         </p>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">III. Ví dụ minh họa nội dung Hóa học THPT với sự hỗ trợ của ICT</span>
+        <h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">III. Ví dụ minh họa nội dung Hóa học THPT với sự hỗ trợ của ICT</span>
         </h2>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">1. </span></strong><span class="Emphasis" style="font-family:'Times New Roman'; font-weight:bold">Bảng tuần hoàn các nguyên tố hóa học</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">1. </span></strong><span class="Emphasis" style="font-family: 'Times New Roman'; font-weight: bold;">Bảng tuần hoàn các nguyên tố hóa học</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Bảng tuần hoàn được hiển thị trực quan trong bài giảng điện tử</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Bảng tuần hoàn được hiển thị trực quan trong bài giảng điện tử</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Dùng phần mềm bảng tuần hoàn tương tác: click vào nguyên tố để xem thông tin (tên, ký hiệu, nguyên tử khối, độ âm điện...). </span>
-            <a href="https://periodic-table.rsc.org/" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://periodic-table.rsc.org/</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Dùng phần mềm bảng tuần hoàn tương tác: click vào nguyên tố để xem thông tin (tên, ký hiệu, nguyên tử khối, độ âm điện...). </span>
+            <a href="https://periodic-table.rsc.org/" style="text-decoration: none;"><span class="Hyperlink" style="font-family: 'Times New Roman';">https://periodic-table.rsc.org/</span></a>
+            <span style="font-family: 'Times New Roman';"> </span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Sử dụng mã màu để phân loại kim loại, phi kim, biểu diễn sự biến đổi tính chất theo chu kỳ và nhóm.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Sử dụng mã màu để phân loại kim loại, phi kim, biểu diễn sự biến đổi tính chất theo chu kỳ và nhóm.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">ICT giúp học sinh dễ nhận ra xu hướng tăng giảm của độ âm điện, năng lượng ion hóa nhờ minh họa bằng màu sắc.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">ICT giúp học sinh dễ nhận ra xu hướng tăng giảm của độ âm điện, năng lượng ion hóa nhờ minh họa bằng màu sắc.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Cách trực quan hỗ trợ học sinh ghi nhớ và hiểu cấu trúc bảng tuần hoàn tốt hơn so với bảng in trong SGK.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Cách trực quan hỗ trợ học sinh ghi nhớ và hiểu cấu trúc bảng tuần hoàn tốt hơn so với bảng in trong SGK.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">2. </span></strong><strong><em><span style="font-family:'Times New Roman'; ">Sử dụng phần mềm ChemSketch</span></em></strong>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">2. </span></strong>
+            <strong>
+                <em><span style="font-family: 'Times New Roman';">Sử dụng phần mềm ChemSketch</span></em>
+            </strong>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">ChemSketch hỗ trợ vẽ công thức cấu tạo phân tử chi tiết, chính xác.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">ChemSketch hỗ trợ vẽ công thức cấu tạo phân tử chi tiết, chính xác.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Hình vẽ có thể chèn trực tiếp vào slide hoặc tài liệu, đảm bảo tính thẩm mỹ và khoa học.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Hình vẽ có thể chèn trực tiếp vào slide hoặc tài liệu, đảm bảo tính thẩm mỹ và khoa học.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Ví dụ: vẽ vòng benzen chuẩn xác với hình lục giác và các liên kết đôi xen kẽ → giúp học sinh hình dung đúng cấu trúc.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Ví dụ: vẽ vòng benzen chuẩn xác với hình lục giác và các liên kết đôi xen kẽ → giúp học sinh hình dung đúng cấu trúc.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <img src="https://pertachem.com/assets/source/images/uploads/benzene-symbol.png" alt="Benzene Symbol" style="max-width: 100%; height: auto;">
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <img src="https://pertachem.com/assets/source/images/uploads/benzene-symbol.png" alt="Benzene Symbol" style="max-width: 100%; height: auto;" />
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Công cụ vẽ chuyên nghiệp giúp học sinh tiếp thu kiến thức trực quan, tin cậy hơn.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Công cụ vẽ chuyên nghiệp giúp học sinh tiếp thu kiến thức trực quan, tin cậy hơn.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">3. </span></strong><strong><em><span style="font-family:'Times New Roman'; ">Video thí nghiệm và mô phỏng phản ứng</span></em></strong>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">3. </span></strong>
+            <strong>
+                <em><span style="font-family: 'Times New Roman';">Video thí nghiệm và mô phỏng phản ứng</span></em>
+            </strong>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Sử dụng video minh họa thí nghiệm hóa học thay cho việc tự làm thí nghiệm (do hạn chế hóa chất độc hại, thời gian...).</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Sử dụng video minh họa thí nghiệm hóa học thay cho việc tự làm thí nghiệm (do hạn chế hóa chất độc hại, thời gian...).</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Ví dụ: video phản ứng giữa KMnO₄ và KI → màu tím nhạt dần, xuất hiện màu vàng nâu của iod → học sinh hiểu rõ quá trình oxi hóa – khử.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Ví dụ: video phản ứng giữa KMnO₄ và KI → màu tím nhạt dần, xuất hiện màu vàng nâu của iod → học sinh hiểu rõ quá trình oxi hóa – khử.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/7FEY0IrHbMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7FEY0IrHbMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">ICT cho phép học sinh quan sát những thí nghiệm khó thực hiện trực tiếp.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">ICT cho phép học sinh quan sát những thí nghiệm khó thực hiện trực tiếp.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">4. </span></strong><strong><em><span style="font-family:'Times New Roman'; ">Mô phỏng cấu tạo nguyên tử</span></em></strong>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">4. </span></strong>
+            <strong>
+                <em><span style="font-family: 'Times New Roman';">Mô phỏng cấu tạo nguyên tử</span></em>
+            </strong>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Trình chiếu mô hình Bohr hoặc mô phỏng quỹ đạo electron trên màn hình. </span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Trình chiếu mô hình Bohr hoặc mô phỏng quỹ đạo electron trên màn hình. </span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/S1LDJUu4nko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/S1LDJUu4nko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Học sinh dễ tưởng tượng electron chuyển động quanh hạt nhân.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Học sinh dễ tưởng tượng electron chuyển động quanh hạt nhân.</span>
         </p>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Các yếu tố trực quan làm cho kiến thức trừu tượng trở nên gần gũi, dễ hiểu hơn.</span>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Các yếu tố trực quan làm cho kiến thức trừu tượng trở nên gần gũi, dễ hiểu hơn.</span>
         </p>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">IV. MỘT SỐ SẢN PHẨM BIÊN SOẠN VĂN BẢN VÀ BÀI TRÌNH CHIẾU CÁ NHÂN</span>
+
+<h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+  <span style="font-family: 'Times New Roman';">IV. MỘT SỐ SẢN PHẨM BIÊN SOẠN VĂN BẢN VÀ BÀI TRÌNH CHIẾU CÁ NHÂN</span>
+</h2>
+
+<ol style="margin-left: 28pt; line-height: 150%; font-size: 12pt; font-family: 'Times New Roman';">
+  <li>
+    Biên soạn văn bản bằng MS Word — <em>File gốc</em>:
+    <a href="https://docs.google.com/document/d/1P8ZeYELBZjfytxiZcJKcaOL0AxvqtE2T/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration: none;">Google Docs</a>
+  </li>
+  <li>
+    Biên soạn văn bản bằng MS Word — <em>File đã chỉnh sửa kèm hướng dẫn chấm</em>:
+    <a href="https://drive.google.com/file/d/1xTxyCmH3ce3c4dW5tlgQpdes2LIqVrBg/view?usp=sharing" style="text-decoration: none;">Google Drive</a>
+  </li>
+  <li>
+    Biên soạn slide bằng MS PowerPoint — <em>File gốc</em>:
+    <a href="https://docs.google.com/presentation/d/1SNE0lJNYhlgfS9ltJcUgvH3P79FhWgmK/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration: none;">Google Slides</a>
+  </li>
+  <li>
+    Biên soạn slide bằng MS PowerPoint — <em>File đã thiết kế lại</em>:
+    <a href="https://drive.google.com/file/d/19qfZ21ENw2U2Tz6353gyt0N6C6segaLs/view?usp=sharing" style="text-decoration: none;">Google Drive</a>
+  </li>
+  <li>
+    Bảng tuần hoàn các nguyên tố hóa học (lớp 10) — <em>KHBD</em>:
+    <a href="https://drive.google.com/file/d/1xKVRmmVll2D7rgW9dDVaKKWN0FeBd_Ae/view?usp=sharing" style="text-decoration: none;">Google Drive</a>
+  </li>
+  <li>
+    Bảng tuần hoàn các nguyên tố hóa học (lớp 10) — <em>PPT</em>:
+    <a href="https://docs.google.com/presentation/d/1VXWwYd01vywwXafb0OoQhBK5wVv6tmUa/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration: none;">Google Slides</a>
+  </li>
+  <li>
+    Bảng tuần hoàn các nguyên tố hóa học (lớp 10) — <em>Phiếu học tập</em>:
+    <a href="https://docs.google.com/document/d/1ras39-eYQS4meY9bb4gsMEahGA1YPSOS/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration: none;">Google Docs</a>
+  </li>
+</ol>
+
+
+        <h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">V. ĐÁNH GIÁ CÁC CÔNG CỤ HỖ TRỢ BIÊN SOẠN VĂN BẢN THÔNG QUA QUÁ TRÌNH SỬ DỤNG VÀ ĐỀ XUẤT PHƯƠNG ÁN TĂNG HIỆU QUẢ KHI SỬ DỤNG CÔNG CỤ</span>
         </h2>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">1. Biên soạn văn bản từ file gốc bằng MS WORD </span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">1. MICROSOFT WORD</span></strong>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:13pt">
-            <strong><span style="font-family:'Times New Roman'; ">File gốc</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Ưu điểm:</span></strong>
         </p>
-        <p style="margin-left:0pt; text-indent:14.2pt; line-height:150%; font-size:13pt">
-            <a href="https://docs.google.com/document/d/1P8ZeYELBZjfytxiZcJKcaOL0AxvqtE2T/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://docs.google.com/document/d/1P8ZeYELBZjfytxiZcJKcaOL0AxvqtE2T/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Theo trải nghiệm của mình, Word là phần mềm tiện lợi nhất để soạn thảo các loại văn bản thông thường.</span>
         </p>
-        <p style="margin-left:0pt; text-indent:14.2pt; line-height:150%; font-size:13pt">
-            <strong><span style="font-family:'Times New Roman'; ">File đã chỉnh sửa kèm hướng dẫn chấm</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Giao diện dễ dùng, phổ biến nên gần như ai cũng có thể sử dụng.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://drive.google.com/file/d/1xTxyCmH3ce3c4dW5tlgQpdes2LIqVrBg/view?usp=sharing" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://drive.google.com/file/d/1xTxyCmH3ce3c4dW5tlgQpdes2LIqVrBg/view?usp=sharing</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Việc lưu trữ và chia sẻ tài liệu cũng rất đơn giản.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">&#xa0;</span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Hạn chế:</span></strong>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">2. Biên soạn slide trình chiếu từ file gốc bằng MS POWERPOINT </span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Một số font chữ không có sẵn, nhưng mình thường khắc phục bằng cách tải thêm font trên mạng để sử dụng linh hoạt.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">File gốc</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">
+                Khi cần gõ công thức hóa học thì gặp khó khăn, vì số và chữ nằm cùng một dòng, chỉnh sửa mất khá nhiều thời gian. Với trường hợp này, mình hay dùng thêm phần mềm như ChemFormatter hoặc Chemistry Formatter để hỗ trợ.
+            </span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://docs.google.com/presentation/d/1SNE0lJNYhlgfS9ltJcUgvH3P79FhWgmK/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://docs.google.com/presentation/d/1SNE0lJNYhlgfS9ltJcUgvH3P79FhWgmK/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">&#xa0;</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">File đã thiết kế lại</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Với môn Hóa hữu cơ, Word không đáp ứng được nhu cầu vẽ công thức cấu tạo. Vì vậy, mình thường phải dùng các công cụ chuyên biệt hơn như ChemSketch hay KingDraw.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://drive.google.com/file/d/19qfZ21ENw2U2Tz6353gyt0N6C6segaLs/view?usp=sharing" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://drive.google.com/file/d/19qfZ21ENw2U2Tz6353gyt0N6C6segaLs/view?usp=sharing</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">2. MICROSOFT POWERPOINT</span></strong>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">&#xa0;</span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Ưu điểm:</span></strong>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">3. Bảng tuần hoàn các nguyên tố hóa học - lớp 10</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Theo mình đánh giá, PowerPoint cực kỳ phù hợp để soạn bài giảng trình chiếu.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">KHBD</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Đây là phần mềm quen thuộc, được đông đảo người dùng lựa chọn.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://drive.google.com/file/d/1xKVRmmVll2D7rgW9dDVaKKWN0FeBd_Ae/view?usp=sharing" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://drive.google.com/file/d/1xKVRmmVll2D7rgW9dDVaKKWN0FeBd_Ae/view?usp=sharing</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Các tính năng khá đa dạng, phục vụ nhiều nhu cầu thiết kế.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">PPT</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Lưu trữ và chia sẻ dễ dàng.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://docs.google.com/presentation/d/1VXWwYd01vywwXafb0OoQhBK5wVv6tmUa/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://docs.google.com/presentation/d/1VXWwYd01vywwXafb0OoQhBK5wVv6tmUa/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Hạn chế:</span></strong>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Phiếu học tập</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">
+                Vì có nhiều tính năng, PowerPoint đôi khi hơi phức tạp, đòi hỏi phải có kiến thức tin học cơ bản. Bản thân mình đã phải tự học thêm qua sách, các khóa online hoặc video hướng dẫn để sử dụng thành thạo hơn.
+            </span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <a href="https://docs.google.com/document/d/1ras39-eYQS4meY9bb4gsMEahGA1YPSOS/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true" style="text-decoration:none"><span class="Hyperlink" style="font-family:'Times New Roman'">https://docs.google.com/document/d/1ras39-eYQS4meY9bb4gsMEahGA1YPSOS/edit?usp=sharing&amp;ouid=117501841448158687499&amp;rtpof=true&amp;sd=true</span></a><span style="font-family:'Times New Roman'"> </span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Giống như Word, việc soạn công thức hóa học trên PowerPoint rất tốn thời gian. Vì thế, mình thường kết hợp thêm phần mềm hỗ trợ để làm nhanh hơn.</span>
         </p>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">V. ĐÁNH GIÁ CÁC CÔNG CỤ HỖ TRỢ BIÊN SOẠN VĂN BẢN THÔNG QUA QUÁ TRÌNH SỬ DỤNG VÀ ĐỀ XUẤT PHƯƠNG ÁN TĂNG HIỆU QUẢ KHI SỬ DỤNG CÔNG CỤ</span>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 14pt;">
+            <strong><span style="font-family: 'Times New Roman';">3. CANVA</span></strong>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Ưu điểm:</span></strong>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Canva khá linh hoạt vì vừa có thể soạn văn bản vừa thiết kế bài trình chiếu. Với các bài giảng cần trình chiếu, mình thường ưu tiên dùng Canva.</span>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Cách sử dụng đơn giản, phù hợp cho nhiều lứa tuổi.</span>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Có sẵn nhiều mẫu thiết kế phong phú: từ slide bài giảng, hồ sơ xin việc, thư từ đến các loại tài liệu khác.</span>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong><span style="font-family: 'Times New Roman';">Hạn chế:</span></strong>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">
+                Như mình từng nhận xét, để khai thác đầy đủ tính năng thì cần mua gói Pro. Tuy nhiên, mình vẫn có thể sử dụng miễn phí qua các nhóm chia sẻ trong cộng đồng giáo dục, hoặc cân nhắc đầu tư chi phí để nâng cấp.
+            </span>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">Khả năng soạn văn bản chưa mạnh bằng Word, nên với các tài liệu quan trọng, mình vẫn ưu tiên Word hơn.</span>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <strong>
+                <span style="font-family: 'Times New Roman';">TÓM LẠI</span>
+            </strong>
+        </p>
+        <p style="text-indent: 14.2pt; line-height: 150%; font-size: 12pt;">
+            <span style="font-family: 'Times New Roman';">
+                Theo trải nghiệm của mình, mỗi công cụ đều có ưu – nhược điểm riêng. Do đó, giáo viên nên kết hợp linh hoạt: dùng Word cho văn bản chính thức, PowerPoint cho bài giảng chi tiết, và Canva khi muốn thiết kế trình chiếu sáng
+                tạo. Việc phối hợp nhiều công cụ sẽ giúp bài soạn vừa hiệu quả vừa tiết kiệm thời gian.
+            </span>
+        </p>
+        <h2 style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">VI. Kết luận</span>
         </h2>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">1. MICROSOFT WORD</span></strong>
+        <p class="NormalWeb" style="margin: 14pt 0pt; text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">Ứng dụng hiệu quả ICT trong biên soạn văn bản và bài trình chiếu môn Hóa học ở bậc THPT đã và đang trở thành xu hướng tất yếu, góp phần </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">đổi mới phương pháp dạy học</span><span style="font-family: 'Times New Roman';">. ICT không những hỗ trợ giáo viên </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">tạo ra bài giảng sinh động, trực quan và giàu thông tin</span><span style="font-family: 'Times New Roman';">, mà còn giúp </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">tiết kiệm thời gian, công sức</span>
+            <span style="font-family: 'Times New Roman';">
+                trong khâu soạn bài và nâng cao năng lực chuyên môn (tiếp cận với các công nghệ dạy học hiện đại). Đối với học sinh, các bài giảng Hóa học có ứng dụng CNTT đem lại trải nghiệm học tập
+            </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">hứng thú, dễ hiểu và thực tiễn</span>
+            <span style="font-family: 'Times New Roman';"> hơn, từ đó nâng cao chất lượng và hiệu quả học tập. Tóm lại, ICT giữ vai trò </span><span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">đắc lực</span>
+            <span style="font-family: 'Times New Roman';"> trong dạy học Hóa học hiện đại, là công cụ không thể thiếu để </span>
+            <span class="Strong" style="font-family: 'Times New Roman'; font-weight: normal;">nâng cao chất lượng giáo dục</span>
+            <span style="font-family: 'Times New Roman';"> và giúp môn Hóa học trở nên hấp dẫn với học sinh trong thời đại số.</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Ưu điểm:</span></strong>
+        <p style="text-indent: 14.2pt; line-height: 150%;">
+            <span style="font-family: 'Times New Roman';">&#xa0;</span>
         </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Theo trải nghiệm của mình, Word là phần mềm tiện lợi nhất để soạn thảo các loại văn bản thông thường.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Giao diện dễ dùng, phổ biến nên gần như ai cũng có thể sử dụng.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Việc lưu trữ và chia sẻ tài liệu cũng rất đơn giản.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Hạn chế:</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Một số font chữ không có sẵn, nhưng mình thường khắc phục bằng cách tải thêm font trên mạng để sử dụng linh hoạt.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Khi cần gõ công thức hóa học thì gặp khó khăn, vì số và chữ nằm cùng một dòng, chỉnh sửa mất khá nhiều thời gian. Với trường hợp này, mình hay dùng thêm phần mềm như ChemFormatter hoặc Chemistry Formatter để hỗ trợ.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">&#xa0;</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Với môn Hóa hữu cơ, Word không đáp ứng được nhu cầu vẽ công thức cấu tạo. Vì vậy, mình thường phải dùng các công cụ chuyên biệt hơn như ChemSketch hay KingDraw.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">2. MICROSOFT POWERPOINT</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Ưu điểm:</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Theo mình đánh giá, PowerPoint cực kỳ phù hợp để soạn bài giảng trình chiếu.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Đây là phần mềm quen thuộc, được đông đảo người dùng lựa chọn.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Các tính năng khá đa dạng, phục vụ nhiều nhu cầu thiết kế.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Lưu trữ và chia sẻ dễ dàng.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Hạn chế:</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Vì có nhiều tính năng, PowerPoint đôi khi hơi phức tạp, đòi hỏi phải có kiến thức tin học cơ bản. Bản thân mình đã phải tự học thêm qua sách, các khóa online hoặc video hướng dẫn để sử dụng thành thạo hơn.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Giống như Word, việc soạn công thức hóa học trên PowerPoint rất tốn thời gian. Vì thế, mình thường kết hợp thêm phần mềm hỗ trợ để làm nhanh hơn.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:14pt">
-            <strong><span style="font-family:'Times New Roman'; ">3. CANVA</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Ưu điểm:</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Canva khá linh hoạt vì vừa có thể soạn văn bản vừa thiết kế bài trình chiếu. Với các bài giảng cần trình chiếu, mình thường ưu tiên dùng Canva.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Cách sử dụng đơn giản, phù hợp cho nhiều lứa tuổi.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Có sẵn nhiều mẫu thiết kế phong phú: từ slide bài giảng, hồ sơ xin việc, thư từ đến các loại tài liệu khác.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><span style="font-family:'Times New Roman'; ">Hạn chế:</span></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Như mình từng nhận xét, để khai thác đầy đủ tính năng thì cần mua gói Pro. Tuy nhiên, mình vẫn có thể sử dụng miễn phí qua các nhóm chia sẻ trong cộng đồng giáo dục, hoặc cân nhắc đầu tư chi phí để nâng cấp.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Khả năng soạn văn bản chưa mạnh bằng Word, nên với các tài liệu quan trọng, mình vẫn ưu tiên Word hơn.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <strong><em><span style="font-family:'Times New Roman'; ">TÓM LẠI</span></em></strong>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%; font-size:12pt">
-            <span style="font-family:'Times New Roman'">Theo trải nghiệm của mình, mỗi công cụ đều có ưu – nhược điểm riêng. Do đó, giáo viên nên kết hợp linh hoạt: dùng Word cho văn bản chính thức, PowerPoint cho bài giảng chi tiết, và Canva khi muốn thiết kế trình chiếu sáng tạo. Việc phối hợp nhiều công cụ sẽ giúp bài soạn vừa hiệu quả vừa tiết kiệm thời gian.</span>
-        </p>
-        <h2 style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">VI. Kết luận</span>
-        </h2>
-        <p class="NormalWeb" style="margin:14pt 0pt; text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">Ứng dụng hiệu quả ICT trong biên soạn văn bản và bài trình chiếu môn Hóa học ở bậc THPT đã và đang trở thành xu hướng tất yếu, góp phần </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">đổi mới phương pháp dạy học</span><span style="font-family:'Times New Roman'">. ICT không những hỗ trợ giáo viên </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">tạo ra bài giảng sinh động, trực quan và giàu thông tin</span><span style="font-family:'Times New Roman'">, mà còn giúp </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">tiết kiệm thời gian, công sức</span><span style="font-family:'Times New Roman'"> trong khâu soạn bài và nâng cao năng lực chuyên môn (tiếp cận với các công nghệ dạy học hiện đại). Đối với học sinh, các bài giảng Hóa học có ứng dụng CNTT đem lại trải nghiệm học tập </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">hứng thú, dễ hiểu và thực tiễn</span><span style="font-family:'Times New Roman'"> hơn, từ đó nâng cao chất lượng và hiệu quả học tập. Tóm lại, ICT giữ vai trò </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">đắc lực</span><span style="font-family:'Times New Roman'"> trong dạy học Hóa học hiện đại, là công cụ không thể thiếu để </span><span class="Strong" style="font-family:'Times New Roman'; font-weight:normal">nâng cao chất lượng giáo dục</span><span style="font-family:'Times New Roman'"> và giúp môn Hóa học trở nên hấp dẫn với học sinh trong thời đại số.</span>
-        </p>
-        <p style="text-indent:14.2pt; line-height:150%">
-            <span style="font-family:'Times New Roman'">&#xa0;</span>
-        </p>
-        <p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0">Converti en HTML avec WordToHTML.net</a></p>
+        <p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size: 11px; color: #d0d0d0;">Converti en HTML avec WordToHTML.net</a></p>
     </body>
 </html>
+
