@@ -11,6 +11,30 @@ export type BlogPost = {
 
 export const blogPosts: readonly BlogPost[] = [
     {
+        "title": {
+            "en": "Authoring Documents & Slides for High School Chemistry — Roles and ICT Tools",
+            "vi": "Biên soạn văn bản & bài trình chiếu Hóa học THPT — Vai trò và công cụ ICT"
+        },
+        "excerpt": {
+            "en": "A practical guide to using Canva, PowerPoint, PhET simulations, and short-form video tools to make chemistry lessons clearer, strengthen logical thinking, and boost student engagement.",
+            "vi": "Hướng dẫn thực hành sử dụng Canva, PowerPoint, mô phỏng PhET và công cụ video ngắn để làm rõ bài học Hóa học, phát triển tư duy logic và tăng hứng thú học tập."
+        },
+        "dateISO": "2025-09-29",
+        "readTime": { "en": "12 min read", "vi": "Đọc 12 phút" },
+        "category": { "en": "Teaching Methods", "vi": "Phương pháp dạy học" },
+        "tags": [
+            { "en": "ICT in Education", "vi": "CNTT trong giáo dục" },
+            { "en": "High School Chemistry", "vi": "Hóa học THPT" },
+            { "en": "Visual Learning", "vi": "Học trực quan" },
+            { "en": "Canva", "vi": "Canva" },
+            { "en": "PowerPoint", "vi": "PowerPoint" },
+            { "en": "PhET Simulations", "vi": "Mô phỏng PhET" },
+            { "en": "CapCut", "vi": "CapCut" }
+        ]
+    },
+
+
+    {
         title: {
             en: "Visual Learning Tools in Chemistry Teaching: Enhancing Memory, Logic, and Engagement",
             vi: "Phương tiện trực quan trong dạy học Hóa học: Ghi nhớ, tư duy logic và hứng thú",

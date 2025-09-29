@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 // (needs a bundler plugin or ?raw support, e.g. Vite)
 import ict1postHtml from "@/data/ICTPOST.html?raw";
 import ict2postHtml from "@/data/ICT2POST.html?raw";
+import ict3postHtml from "@/data/ICT3POST.html?raw";
 
 export default function PostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -29,12 +30,17 @@ export default function PostPage() {
   
   var ictpostHtml = ictpostHtml;
 
-  if (postIndex === 0) {
+    if (postIndex === 0) {
+        ictpostHtml = ict3postHtml;
+    }
+
+  if (postIndex === 1) {
     ictpostHtml = ict2postHtml;
   }
-  if (postIndex === 1) {
+  if (postIndex === 2) {
     ictpostHtml = ict1postHtml;
   }
+
 
   const formatter = useMemo(
     () =>
